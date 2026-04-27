@@ -1,0 +1,6 @@
+streamlit
+pandas
+numpy
+sgp4
+skyfield
+pymap3d
