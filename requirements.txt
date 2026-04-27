@@ -1,0 +1,7 @@
+streamlit
+pandas
+numpy
+sgp4
+skyfield
+zoneinfo
+pymap3d
