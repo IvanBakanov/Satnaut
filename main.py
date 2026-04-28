@@ -36,6 +36,14 @@ st.markdown(f"""
         .stApp {{
             background-color: white;
         }}
+        
+        :root {{
+            --st-color-positive: {MAIN_COLOR}; /* На всякий случай */
+        }}
+    
+        html, body, [data-testid="stAppViewContainer"] {{
+            --primary-color: {MAIN_COLOR} !important;
+        }}
 
         /* КНОПКА */
         button[data-testid="baseButton-primary"]:enabled {{
