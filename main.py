@@ -38,11 +38,11 @@ st.markdown(f"""
         }}
 
         /* КНОПКА */
-        div.stButton > button[data-testid="baseButton-primary"] {{
-            background-color: {MAIN_COLOR} !important;
-            color: white !important;
-            border-radius: 5px !important;
-            border: none !important;
+        div.stButton > button[data-testid="primary"] {{
+            background-color: {MAIN_COLOR};
+            color: white;
+            border-radius: 5px;
+            border: none;
         }}
         /* Цвет при наведении на кнопку */
         div.stButton > button:first-child:hover {{
