@@ -45,13 +45,19 @@ st.markdown(f"""
             --primary-color: {MAIN_COLOR} !important;
         }}
 
-        /* КНОПКА */
-        button[data-testid="baseButton-primary"]:enabled {{
-            background-color: {MAIN_COLOR};
-            color: white;
-            border-radius: 5px;
-            border: none;
+        /* КНОПКИ */
+        button:has(p:contains("RUN")) {{
+            background-color: {MAIN_COLOR} !important;
+            color: white !important;
+            border: none !important;
         }}
+
+        button:has(p:contains("CLEAR")) {{
+            background-color: transparent !important;
+            color: {MAIN_COLOR} !important;
+            border: 2px solid {MAIN_COLOR} !important;
+        }}
+        
         /* Цвет при наведении на кнопку */
         div.stButton > button:first-child:hover {{
             background-color: #1D4ED8;
