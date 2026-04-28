@@ -1,0 +1,48 @@
+SAT_TLE
+Двухстрочный элемент (TLE)
+Получить актуальные данные TLE.
+<satellite name>
+ISS (ZARYA)
+TLE string 1, TLE string 2
+parsers.get_tle; {"sat": "user"}
+
+SAT_OMM
+Параметры орбиты (OMM)
+Получить актуальные данные OMM.
+<satellite name>
+ISS (ZARYA)
+OMM
+parsers.get_omm; {"sat": "user"}
+parsers.parse_omm; {"omm_data": "prev"}
+
+LOCAL_TIME
+Точное время
+Получить точное время в вашем часовом поясе.
+<location>
+Europe/Moscow
+UTC
+engine.get_dt_UTC_local; {"location": "user"}
+
+SAT_SUBPOINT
+Координаты подспутниковой точки
+Вычисляет широту и долготу подспутниковой точки на основе данных TLE.
+<satellite name>
+ISS (ZARYA)
+latitude, longitude
+parsers.get_tle; {"sat": "user"}
+Satellite; {"sat": "user", "TLE_parsed": "prev"}
+engine.get_dt_UTC_0; {}
+get_state_vector; {"now": "prev"}; Satellite
+get_subsatellite_point; {"state": "step 4", "now": "step 3"}; Satellite
+
+TEME_TO_ECEF
+Преобразовать TEME -> ECEF
+Преобразование координат TEME -> ECEF на основе данных TLE.
+<satellite name>
+ISS (ZARYA)
+x, y, z
+parsers.get_tle; {"sat": "user"}
+Satellite; {"sat": "user", "TLE_parsed": "prev"}
+engine.get_dt_UTC_0; {}
+get_state_vector; {"now": "prev"}; Satellite
+engine.teme_to_ecef; {"state": "step 4", "now": "step 3"}
