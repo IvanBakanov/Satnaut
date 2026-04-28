@@ -38,7 +38,7 @@ st.markdown(f"""
         }}
 
         /* КНОПКА */
-        div.stButton > button[data-testid="primary"] {{
+        button[data-testid="baseButton-primary"]:enabled {{
             background-color: {MAIN_COLOR};
             color: white;
             border-radius: 5px;
