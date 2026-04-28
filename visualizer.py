@@ -48,10 +48,14 @@ def update_trace_plot(fig, lats, lons):
     ax.set_ylim([-90, 90])
     
     # Отрисовка трассы поточечно
-    ax.scatter(lons, lats, s=2, color="#1f77b4", label="Ground track")
+    ax.scatter(lons, lats, s=2, color="#1f77b4")
     
     # Выделяем текущее положение спутника
     ax.scatter(lons[0], lats[0], color="red", s=20, marker='X', label="Current position")
+    
+    ax.set_xlabel("Longitude")
+    ax.set_ylabel("Latitude")
+    ax.set_title("Satellite ground track", fontsize=10)
     
     ax.legend(loc="upper right", fontsize="small")
     
