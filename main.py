@@ -38,7 +38,7 @@ st.markdown(f"""
         }}
         
         :root {{
-            --st-color-positive: {MAIN_COLOR}; /* На всякий случай */
+            --st-color-positive: {MAIN_COLOR};
         }}
     
         html, body, [data-testid="stAppViewContainer"] {{
